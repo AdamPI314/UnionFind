@@ -1,7 +1,7 @@
 # https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
 
 
-class UnionFind(object):
+class UnionFindBase(object):
     def __init__(self, n):
         self.id = [None] * n
         for i in range(n):
@@ -16,7 +16,7 @@ class UnionFind(object):
         raise NotImplementedError("Subclass must implement abstract method")
 
 
-class QuickFind(UnionFind):
+class QuickFind(UnionFindBase):
     def __init__(self, n):
         super(QuickFind, self).__init__(n)
 
@@ -33,7 +33,7 @@ class QuickFind(UnionFind):
                 self.id[i] = self.id[q]
 
 
-class QuickUnion(UnionFind):
+class QuickUnion(UnionFindBase):
     def __init__(self, n):
         super(QuickUnion, self).__init__(n)
 
