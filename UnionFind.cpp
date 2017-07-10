@@ -1,5 +1,5 @@
 class UnionFind {
-    // Weighted Quick Union With PathCompression
+    // Weighted Quick Union With Path Compression
 public:
     UnionFind(int n) {
         this->id.assign(n, 0);
