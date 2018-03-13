@@ -27,7 +27,9 @@ public:
     bool find(int p, int q) {
         return root(p) == root(q);
     }
-    
+    // weighted quick union, O(N+M lg*N), where lg*N represents number of times needed to 
+    // take log of a number unitil reaching 1, almost constant, meaning complexity O(N+M)
+    // https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
     void unite(int p, int q) {
         auto i = root(p);
         auto j = root(q);
